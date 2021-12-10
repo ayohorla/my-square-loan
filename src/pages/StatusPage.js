@@ -1,7 +1,7 @@
 function StatusPage(){
     return(
         <div>
-            
+            User information
         </div>
     )
 }
