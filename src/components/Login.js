@@ -24,7 +24,7 @@ function Login() {
                 <button className='btn1' onClick = {registerHandler}>Register</button>
             </div>
 
-            {modalOpen && <Modal/>}
+            {modalOpen && <Modal onCancel = {closeModalHandler} onCheckStatus={closeModalHandler}/>}
             {modalOpen && <Backdrop onClose={closeModalHandler}/>}
         </div>
     );
