@@ -1,14 +1,13 @@
+import React from 'react';
+import Login from "./components/Login";
+import Register from "./components/Register";
+
 function App() {
   return (
     <div>
       <h1>Square Loan</h1>
-      <div className = 'card'>
-        <h2>Loan Status Verification Hub</h2>
-        <div className = 'actions'>
-          <button className = 'btn'>Login</button>
-          <button className = 'btn1'>Register</button>
-        </div>
-      </div>
+      <Login/>
+      <Register/>
     </div>
   );
 }
