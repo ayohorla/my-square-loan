@@ -3,7 +3,7 @@ import {useState} from 'react';
 import Modal from './Modal';
 import Backdrop from './Backdrop';
 
-function Login() {
+function HomePage() {
 
     const [modalOpen, setModalOpen] = useState(false);
 
@@ -31,4 +31,4 @@ function Login() {
 
 }
 
-export default Login;
+export default HomePage;

@@ -1,20 +1,30 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
-import HomePage from './pages/Homepage';
+import Login from './pages/Login';
 import StatusPage from './pages/StatusPage';
-import Login from "./components/Login";
+import HomePage from "./components/HomePage";
 import Register from "./pages/Register";
 
 function App() {
   return (
     <div>
       <h1>Square Loan</h1>
-      <Login/>
-      <Register/>
-      <Route path = '/'>
-
-      </Route>
+      <HomePage />
+      <Routes>
+        <Route path='/'>
+          <Login />
+        </Route>
+        <Route path='/dashboard'>
+          <Dashboard />
+        </Route>
+        <Route path='/register'>
+          <Register /> 
+        </Route>
+        <Route path = '/status-page'>
+            <StatusPage/>
+        </Route>
+        </Routes>
     </div>
   );
 }
