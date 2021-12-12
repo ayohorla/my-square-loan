@@ -1,8 +1,11 @@
+import NewUserForm from "../components/Users/NewUserForm";
+
 function Register() {
     return (
-        <div>
-            New User
-        </div>
+        <section>
+            <h1>Create Account</h1>
+            <NewUserForm />
+        </section>
     );
 }
 

@@ -2,6 +2,7 @@ import {useState} from 'react';
 
 import Modal from './Modal';
 import Backdrop from './Backdrop';
+import SignIn from './SignIn';
 
 function HomePage() {
 
@@ -16,6 +17,9 @@ function HomePage() {
     function closeModalHandler(){
         setModalOpen(false);
     }
+    function openSignInHandler(){
+        setModalOpen(true);
+    }
     return (
         <div className='card'>
             <h2>Loan Status Verification Hub</h2>
@@ -24,8 +28,9 @@ function HomePage() {
                 <button className='btn1' onClick = {registerHandler}>Register</button>
             </div>
 
-            {modalOpen && <Modal onCancel = {closeModalHandler} onCheckStatus={closeModalHandler}/>}
+            {modalOpen && <Modal onCancel = {closeModalHandler} onSignIn={closeModalHandler}/>}
             {modalOpen && <Backdrop onClose={closeModalHandler}/>}
+            {modalOpen && <SignIn onClick= {openSignInHandler}/>}
         </div>
     );
 

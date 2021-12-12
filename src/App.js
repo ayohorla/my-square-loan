@@ -1,31 +1,31 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
 import StatusPage from './pages/StatusPage';
-import HomePage from "./components/HomePage";
 import Register from "./pages/Register";
+import Layout from './components/layout/Layout';
+
 
 function App() {
   return (
-    <div>
-      <h1>Square Loan</h1>
-      <HomePage />
-      <Routes>
-        <Route path='/'>
+    <Layout>
+      <br></br>
+      <Switch>
+        <Route path='/' exact>
           <Login />
         </Route>
         <Route path='/dashboard'>
           <Dashboard />
         </Route>
         <Route path='/register'>
-          <Register /> 
+          <Register />
         </Route>
-        <Route path = '/status-page'>
-            <StatusPage/>
+        <Route path='/status-page'>
+          <StatusPage />
         </Route>
-        </Routes>
-    </div>
+      </Switch>
+    </Layout>
   );
 }
 
