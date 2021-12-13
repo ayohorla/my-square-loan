@@ -17,7 +17,13 @@ function NewUserForm() {
                     </label>
                     <input type='text' required id='address' />
                 </div>
-                <div className={classes.action}>
+                <div className={classes.control}>
+                    <label htmlFor='totalAmountBorrowed'>
+                        Total Amount Borrowed
+                    </label>
+                    <input type='text' required id='totalAmountBorrowed' />
+                </div>
+                <div className={classes.actions}>
                     <button>Create User</button>
                 </div>
             </form>
