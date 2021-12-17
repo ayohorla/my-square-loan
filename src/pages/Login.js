@@ -3,12 +3,13 @@ import classes from '../components/Users/NewUserForm.module.css';
 
 function Login() {
 
-    function loanStatusHandler(props){
+    function loanStatusHandler(userData){
         fetch(
             'https://my-square-loan-default-rtdb.firebaseio.com/users.json'
         ).then((Response) => {
-            Response.json(props.users);
+            Response.json(userData);
         })
+        console.log(userData);
     }
     return (
         <section>

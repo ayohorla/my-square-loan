@@ -12,14 +12,9 @@ function MainNavigation(){
                     <Link to='/'>Login</Link>
                 </li>
                 <li>
-                    <Link to='/dashboard'>Dashboard</Link>
-                </li>
-                <li>
                     <Link to='/register'>Register</Link>
                 </li>
-                <li>
-                    <Link to='/StatusPage'>Customer's Status Page</Link>
-                </li>
+                
             </ul>
         </nav>
     </header>
