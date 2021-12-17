@@ -7,10 +7,12 @@ function UserItem(props){
         <Card>
             <div className={classes.content}>
                 <h3>
+                    <title>
                     {props.title}
+                    </title>
                 </h3>
                 <address>{props.address}</address>
-                <p>{props.description}</p>
+                <description>{props.description}</description>
             </div>
             <div className={classes.actions}>
                 <button>To StatusPage</button>
