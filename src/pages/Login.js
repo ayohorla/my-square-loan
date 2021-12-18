@@ -13,7 +13,7 @@ function Login() {
     }
     return (
         <section>
-            <h1>Sign In Your Account</h1>
+            <h1>Check Account Status</h1>
             <Card>
                 <form className={classes.form} onClick={loanStatusHandler}>
                     <div className={classes.control}>
