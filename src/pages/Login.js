@@ -1,16 +1,25 @@
+import { useEffect, useRef} from 'react';
 import Card from '../components/Interface/Card';
 import classes from '../components/Users/NewUserForm.module.css';
 
-function Login() {
+function Login(props) {
+    const titleInputRef = useRef();
 
-    function loanStatusHandler(userData){
+    function loanStatusHandler (e) {
+        e.preventDefault (); 
         fetch(
             'https://my-square-loan-default-rtdb.firebaseio.com/users.json'
-        ).then((Response) => {
-            Response.json(userData);
-        })
-        console.log(userData);
-    }
+        ).then((response) => {
+            return response.json();
+        }).then((data) => {
+            console.log();
+
+        });
+    };
+    useEffect(() => {
+        ;
+    }, []);
+
     return (
         <section>
             <h1>Check Account Status</h1>
@@ -20,7 +29,7 @@ function Login() {
                         <label htmlFor='title'>
                             Name
                         </label>
-                        <input type='text' required id='title' />
+                        <input type='text' required id='title' ref={titleInputRef} />
                     </div>
                     <div className={classes.actions}>
                         <button>Loan Status</button>
